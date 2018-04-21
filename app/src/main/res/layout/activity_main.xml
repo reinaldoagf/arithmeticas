@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.reinaldogonzlez.operacionesmatematicas.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OPERACIONES MATEMATICAS"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo1" />
+    <EditText
+        android:id="@+id/etFirst"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="INGRESE PRIMER VALOR"/>
+    <EditText
+        android:id="@+id/etSecond"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="INGRESE SEGUNDO VALOR"/>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnSuma"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="293dp"
+            android:onClick="operacion"/>
+        <Button
+            android:id="@+id/btnResta"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="293dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btnSuma"
+            android:layout_toEndOf="@+id/btnSuma"
+            android:onClick="operacion"/>
+        <Button
+            android:id="@+id/btnMultiplicacion"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="x"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="293dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btnResta"
+            android:layout_toEndOf="@+id/btnResta"
+            android:onClick="operacion"/>
+        <Button
+            android:id="@+id/btnDivision"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="/"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="293dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btnMultiplicacion"
+            android:layout_toEndOf="@+id/btnMultiplicacion"
+            android:onClick="operacion"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EL RESULTADO ES: "
+        android:textAlignment="center"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30dp"
+        android:textAlignment="center"/>
+</LinearLayout>
